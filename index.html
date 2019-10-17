@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+    <title>Bingo, Baby!</title>
+
+    <style>
+        body {
+            max-width: 768px;
+            margin: 0 auto;
+            background: #181818;
+            color: white;
+            font-family: font-family: 'Mansalva', cursive;
+            margin-bottom: 50%;
+        }
+
+        #bingoBoard {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>B I N G O</h1>
+
+    <div id="bingoBoard">1</div>
+
+    <div class="nums"></div>
+
+    <div><input type="button" onclick="randomizer()" value="randomNumberPicker"> </div>
+
+
+
+    <script>
+
+        //instead of a table, something like this code should work to generate numbers...  
+
+        window.onload = function () {
+            var bingoBoardSlots = document.querySelector("#bingoBoard");
+            for (var i = 0; i < 76; i++) {
+                var cell = document.createElement("div");
+                cell.className = "nums";
+                cell.innerText = i + 1;
+                bingoBoardSlots.appendChild(cell);
+              
+            }
+        }
+
+
+
+        function randomNumberPicker() {
+            var randomNumberPicker = Math.random();
+
+
+            //has to also be some way to only pick a number btwn 1-76 1x per game
+        }
+
+    </script>
+</body>
+
+</html>
